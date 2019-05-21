@@ -68,6 +68,7 @@ for combination in combinations:
     val_f_error_list.append(result.avg_val_f_error)
     val_cf_error_list.append(result.avg_val_cf_error)
     ate_list.append(result.ate)
+    i += 1
 myDf = pd.DataFrame()
 myDf['Dropout'] = dropout_list
 myDf['Alpha'] = alpha_list
