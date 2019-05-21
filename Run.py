@@ -16,7 +16,7 @@ train_file_name = 'gen_data.test.npz'
 test_file_name = 'gen_data.train.npz'
 outdir = 'results/'
 experiments = 20
-iterations = 20000
+iterations = 200000
 batch_size = 100
 validation_size = 0.3
 
