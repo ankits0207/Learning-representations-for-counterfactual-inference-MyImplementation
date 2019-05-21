@@ -82,7 +82,7 @@ class TrainCFRNet:
         self.avg_train_f_error = avg_train_f_error/experiments
         self.avg_train_cf_error = avg_train_cf_error/experiments
         self.avg_val_f_error = avg_val_f_error/experiments
-        self.acg_val_cf_error = avg_val_cf_error/experiments
+        self.avg_val_cf_error = avg_val_cf_error/experiments
         self.ate = self.get_ate(test, predictions_from_all_experiments)
 
     def trainer(self, network, session, training_step, train_data, validation_data, test_data, iterations, batch_size,
