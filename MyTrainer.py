@@ -84,6 +84,8 @@ class TrainCFRNet:
         self.avg_val_f_error = avg_val_f_error/experiments
         self.avg_val_cf_error = avg_val_cf_error/experiments
         self.ate = self.get_ate(test, predictions_from_all_experiments)
+        my_session.close()
+        tf.reset_default_graph()
 
     def trainer(self, network, session, training_step, train_data, validation_data, test_data, iterations, batch_size,
                 exp_id, dropout, my_alpha, my_lambda, train_row_count, valid_row_count):
