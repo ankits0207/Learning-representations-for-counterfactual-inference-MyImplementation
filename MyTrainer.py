@@ -110,16 +110,6 @@ class TrainCFRNet:
 
         # Losses
         losses=[]
-        objective_function, factual_error, imbalance_error = session.run([network.tot_loss, network.pred_loss,
-                                                                          network.imb_dist], feed_dict=dict_factual)
-        counter_factual_error = session.run(network.pred_loss, feed_dict=dict_counter_factual)
-
-        valid_objective_function, valid_factual_error, valid_imbalance_error = session.run([network.tot_loss, network.pred_loss,
-                                                                          network.imb_dist], feed_dict=dict_valid_factual)
-        valid_counter_factual_error = session.run(network.pred_loss, feed_dict=dict_valid_counter_factual)
-
-        losses.append([objective_function, factual_error, imbalance_error, counter_factual_error,
-                       valid_objective_function, valid_factual_error, valid_imbalance_error, valid_counter_factual_error])
 
         # Predictions
         preds = []
